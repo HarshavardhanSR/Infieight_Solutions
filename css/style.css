@@ -811,7 +811,9 @@ body::-webkit-scrollbar {
 }
 
 #blogSectionMain {
-  padding: 5vh var(--pad-x);
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 5vh clamp(24px, 5vw, 120px);
 }
 
 #blogSectionHeading {
@@ -822,29 +824,38 @@ body::-webkit-scrollbar {
 }
 
 #blogSectionContent {
-  margin-top: 8vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  gap: 5vh;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(24px, 3vw, 48px);
+  margin-top: clamp(40px, 6vw, 88px);
 }
 
 .blogSectionContentBox {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 50px;
+  min-width: 0;
+  flex-direction: column;
+  align-items: stretch;
+  gap: clamp(16px, 2vw, 28px);
+}
+
+.blogSectionContentImage {
+  width: 100%;
+  overflow: hidden;
+  border-radius: calc(1 * var(--vw));
 }
 
 .blogSectionContentImage img {
-  width: calc(25 * var(--vw));
-  border-radius: calc(1 * var(--vw));
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: inherit;
 }
 
 .blogSectionContentText {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: clamp(14px, 1.8vw, 24px);
+  width: 100%;
 }
 
 .blogSectionContentText button {
@@ -858,9 +869,9 @@ body::-webkit-scrollbar {
 }
 
 .blogSectionContentText .blogSectionContentInfo {
-  width: calc(30 * var(--vw));
+  width: 100%;
   color: white;
-  font-size: calc(2.2 * var(--fs));
+  font-size: clamp(20px, 2vw, 32px);
   font-weight: 600;
 }
 
@@ -3275,14 +3286,14 @@ html.has-cur * {
   grid-template-columns: repeat(6, minmax(0, 1fr));
   align-items: center;
   justify-items: center;
-  gap: clamp(24px, 4vw, 64px);
+  gap: clamp(16px, 2.4vw, 40px);
   margin-top: clamp(42px, 6vw, 84px);
 }
 
 .client-trust__logos img {
   display: block;
-  width: min(100%, 150px);
-  max-height: 42px;
+  width: min(100%, 190px);
+  max-height: 54px;
   object-fit: contain;
   filter: grayscale(1);
   opacity: 0.68;
