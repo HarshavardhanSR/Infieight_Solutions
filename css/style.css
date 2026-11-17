@@ -3672,10 +3672,17 @@ html.has-cur * {
 }
 
 #footerMain {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
   width: 100%;
   max-width: 1680px;
   margin: 0 auto;
   gap: clamp(36px, 7vw, 110px);
+}
+
+#footerMainLeft,
+#footerMainRight {
+  min-width: 0;
 }
 
 #footerMainLeft {
@@ -3683,14 +3690,16 @@ html.has-cur * {
 }
 
 .InfoAddress {
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(24px, 5vw, 72px);
 }
 
 .address1 {
-  width: clamp(180px, 15vw, 260px);
+  width: 100%;
+  min-width: 0;
 }
 
 #footerMainRight {
-  width: min(38%, 500px);
+  width: auto;
 }

@@ -171,18 +171,18 @@
 
   /* footer */
   #footerMain {
-    flex-direction: column;
+    grid-template-columns: minmax(0, 1fr);
     gap: 60px;
   }
 
   .InfoAddress {
-    flex-wrap: wrap;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 40px;
   }
 
   .address1 {
-    width: auto;
-    min-width: 200px;
+    width: 100%;
+    min-width: 0;
   }
 
   #footerMainRight {
@@ -1807,7 +1807,7 @@
   }
 
   #footerMain {
-    flex-direction: column;
+    grid-template-columns: minmax(0, 1fr);
     gap: 56px;
     padding: 64px 20px 48px;
   }
@@ -1862,7 +1862,11 @@
   }
 
   #footerMain .InfoAddress {
-    flex-direction: column;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  #footerMain .address1 {
+    width: min(100%, 260px);
   }
 
   #footerLegal {
