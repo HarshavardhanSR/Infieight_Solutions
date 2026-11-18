@@ -1468,7 +1468,7 @@ body::-webkit-scrollbar {
 
 .companySec1Left {
   width: calc(10 * var(--vw));
-  font-size: calc(1 * var(--fs));
+  font-size: calc(0.8 * var(--fs));
   text-transform: uppercase;
 }
 
@@ -1522,7 +1522,7 @@ body::-webkit-scrollbar {
 }
 
 .companyPageSection2InfoRight {
-  width: calc(38 * var(--vw));
+  width: calc(55 * var(--vw));
   font-size: calc(1.4 * var(--fs));
   display: flex;
   gap: 50px;
@@ -1532,11 +1532,13 @@ body::-webkit-scrollbar {
 
 .companyPageSection2InfoBottom {
   display: flex;
-  gap: 50px;
+  justify-content: space-between;
+  gap: clamp(20px, 2vw, 32px);
 }
 
 .companyPageSection2InfoBottom p {
   font-size: calc(3.5 * var(--fs));
+  white-space: nowrap;
 }
 
 .companyPageSection2InfoBottom h5 {
@@ -1689,7 +1691,7 @@ body::-webkit-scrollbar {
 .getToKnowUsHeading {
   font-size: calc(4 * var(--fs));
   font-weight: 800;
-  width: calc(30 * var(--vw));
+  width: 100%;
   line-height: 1.1;
 }
 
