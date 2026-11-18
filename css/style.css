@@ -3680,9 +3680,23 @@ html.has-cur * {
   aspect-ratio: 4 / 3;
 }
 
+.project-image {
+  scale: 1;
+  translate: none;
+}
+
+.projectShowcaseBox:hover .project-image {
+  transform: scale(1.02);
+}
+
 .projectShowcaseBoxtext {
   width: 100%;
   margin-top: 12px;
+}
+
+.projectShowcaseBoxtext p {
+  font-size: clamp(18px, 1.1vw, 24px);
+  line-height: 1.35;
 }
 
 #footerMain {
